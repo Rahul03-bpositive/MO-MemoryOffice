@@ -1,4 +1,4 @@
-from src.scanner import scan_images
+from src.services.scanner import scan_images
 
 
 def main():
@@ -14,7 +14,12 @@ def main():
     print(f"\nFound {len(images)} images.\n")
 
     for image in images:
-        print(image)
+        print(f"Filename : {image.filename}")
+        print(f"Extension: {image.extension}")
+        print(f"Size     : {image.size} bytes")
+        print(f"Width    : {image.width}")
+        print(f"Height   : {image.height}")
+        print("-" * 40)
 
 
 if __name__ == "__main__":
